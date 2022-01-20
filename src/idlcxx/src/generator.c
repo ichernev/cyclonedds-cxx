@@ -724,6 +724,10 @@ generate_includes(const idl_pstate_t *pstate, struct generator *generator)
       incs[len++] = generator->union_include;
       incs[len++] = "<dds/core/Exception.hpp>\n";
     }
+
+    incs[len++] = "<iostream>\n";
+    incs[len++] = "\"org/eclipse/cyclonedds/core/OstreamWrap.hpp\"\n";
+
     if (generator->uses_optional)
       incs[len++] = generator->optional_include;
 
